@@ -1,0 +1,72 @@
+.collapsible {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__header {
+        height: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: lightgray;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-left: 2rem;
+    }
+
+    &__element {
+        min-height: 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: grey;
+        margin-bottom: .8rem;
+        position: relative;
+        padding: 1rem .5rem;
+
+        @media (max-width: 768px) {
+            margin-right: .5rem;
+        }
+    }
+
+    &__placeholder {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: .5rem 0;
+    }
+
+    &__description {
+        font-size: 1.4rem;
+        font-weight: 300;
+        margin: .5rem 0;
+    }
+
+    &__stars {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+}

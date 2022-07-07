@@ -2,5 +2,9 @@
     height: 3rem;
     margin-bottom: 2rem;
     background-color: lightgray;
-    border: 1px solid gray
+    border: 1px solid gray;
+
+    &:focus {
+        outline: none;
+    }
 }

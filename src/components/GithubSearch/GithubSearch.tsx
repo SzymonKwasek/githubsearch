@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../controls/Button/Button";
-import Collapsible from "../../controls/Collapsible/Collapsible";
+import Collapsible from "../Collapsible/Collapsible";
 import Input from "../../controls/Input/Input";
 import "./GithubSearch.scss";
 

@@ -6,6 +6,10 @@
     max-width: 40rem;
     margin: 10rem auto;
 
+    @media (max-width: 768px) {
+        margin-top: 5rem;
+    }
+
     &__text {
         font-size: 1.5rem;
         margin: 1rem 0;
