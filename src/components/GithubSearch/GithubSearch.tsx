@@ -15,19 +15,6 @@ const GithubSearch = () => {
     const [IsLoading, setIsLoading] = useState<boolean>(false);
     const [Users, setUsers] = useState<IUser[]>([]);
 
-    // useEffect(() => {
-    //     let handler: NodeJS.Timeout;
-    //     if (InputValue.length > 0) {
-    //         handler = setTimeout(() => {
-    //             GetUsers();
-    //         }, 500);
-    //     }
-
-    //     return () => {
-    //         clearTimeout(handler);
-    //     }
-    // }, [InputValue]);
-
     const GetUsers = () => {
         setIsLoading(true);
         fetch(
@@ -37,20 +24,17 @@ const GithubSearch = () => {
         ).then(
             data => {
                 setIsLoading(false);
-                console.log(data)
-                const users = data.items.map((el: any) => {
+                const users = data.items?.map((el: any) => {
                     return {
                         Login: el.login,
                         Id: el.id,
                         RepoUrl: el.repos_url
                     }
                 })
-                console.log(users)
                 setUsers(users.slice(0, 5));
             }
         ).catch(
             err => {
-                console.log(err)
                 setIsLoading(false);
             }
         );
