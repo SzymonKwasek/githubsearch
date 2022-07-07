@@ -3,6 +3,7 @@ import Button from "../../controls/Button/Button";
 import Collapsible from "../Collapsible/Collapsible";
 import Input from "../../controls/Input/Input";
 import "./GithubSearch.scss";
+import { useDebounce } from "../../utils/Hooks";
 
 interface IUser {
     Login: string;
@@ -34,7 +35,7 @@ const GithubSearch = () => {
                 setUsers(users.slice(0, 5));
             }
         ).catch(
-            err => {
+            () => {
                 setIsLoading(false);
             }
         );
@@ -44,9 +45,8 @@ const GithubSearch = () => {
         setInputValue(e.target.value);
     }
 
-    const OnSearch = () => {
-        GetUsers();
-    }
+    const OnSearch = useDebounce(GetUsers, 500);
+
     return (
         <div className="github-search">
             <Input
