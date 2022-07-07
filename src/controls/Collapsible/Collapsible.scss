@@ -1,0 +1,33 @@
+.collapsible {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    &__header {
+        height: 1.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        background-color: lightgray;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding-left: 2rem;
+    }
+
+    &__element {
+        height: 7rem;
+        display: flex;
+        background-color: grey;
+        margin-bottom: .8rem;
+    }
+
+}
